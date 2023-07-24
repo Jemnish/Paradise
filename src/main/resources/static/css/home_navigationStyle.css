@@ -9,7 +9,7 @@ body {
   font-family: montserrat;
 }
 nav {
-  background: #307c34;
+  background: #f16e1e;
   height: 80px;
   width: 100%;
   position: sticky;
@@ -57,7 +57,7 @@ nav ul button a {
 nav ul a.active,
 nav ul a:hover,
 .dropdown:hover {
-  background: #307c34;
+  background: #f16e1e;
   transition: 0.5s;
   border-radius: 20px;
 }
