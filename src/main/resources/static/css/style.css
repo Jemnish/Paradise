@@ -4,8 +4,18 @@
 	line-height:1.5;
 	--primary-blue: #233975;
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	color: black;
+}
+
 body{
     display: flex;
+
 }
 .main{
 	height:100%;
@@ -20,8 +30,7 @@ body{
     border-radius: 0px;
 }
 .left .img{
-	height:50%;
-	width: 90%;
+	width: 100%;
 }
 .right{
 	height: 100%;
@@ -30,6 +39,7 @@ body{
 }
 
 .right .h3{
+	padding-top: 40px;
 	align-items: center;
     margin-top: 0%;
     margin-left: 22%;
@@ -41,6 +51,7 @@ body{
     color: #000000;
 }
 .right .name{
+	margin-top: 20px;
 	margin-left: 22%;
 	display: block;
 	width: 50%;
@@ -88,7 +99,7 @@ body{
 	margin-left: 22%;
 	display: block;
 	width: 50%;
-	background: gray;
+	background: #f58c54;
 	color: white;
 	font-weight: 700;
 	border: none;
@@ -99,7 +110,8 @@ body{
 	letter-spacing: 0.5px;
 }
 .Submit:hover{
-	background:black;
+	background-color: #F26D3DFF;
+	color: white;
 	cursor: pointer;
 }
 

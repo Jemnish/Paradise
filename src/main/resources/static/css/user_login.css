@@ -16,16 +16,19 @@ body{
     border-radius: 0px;
 }
 .login-image{
-    width: 100%;
-    height: 100%;
+    width: 700px;
+    height: 665px;
 }   
 .wrapper-right{
     width: 100%;
+    /*border-radius: 0px;*/
     background: #FFFFFF;
+    /* height: 100%; */
 }
 .h2{
     margin-top: 20%;
     margin-left: 8%;
+    /*border-radius: nullpx;*/
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -35,6 +38,7 @@ body{
 .h3-1{
     margin-top: 3%;
     margin-left: 8%;
+    /*border-radius: nullpx;*/
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -42,7 +46,7 @@ body{
      color: #000000;
 }
 .email-box{
-    margin-top: 15%;
+    margin-top: 40px;
     margin-left: 8%;
     height: 45px;
     width: 80%;
@@ -69,8 +73,13 @@ body{
     background-color: #F58C54FF;
     color: #FFFFFF;
 }
+.login-button:hover {
+    background-color: #F26D3DFF;
+    color: white;
+    cursor: pointer;
+}
 .h3-2{
-    margin-top: 10%;
+    margin-top: 20px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
