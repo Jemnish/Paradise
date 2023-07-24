@@ -7,13 +7,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="shortcut icon" type="x-icon" th:href="@{/images/logo_transparent.png}">
+    <link rel="shortcut icon" type="x-icon" th:href="@{/images/Logo.png}">
     <link rel="stylesheet" th:href="@{~/css/footerStyle.css}">
     <link rel="stylesheet" th:href="@{~/css/home_navigationStyle.css}">
     <link rel="stylesheet" th:href="@{~/css/HomepageStyle.css}">
     <link rel="stylesheet" th:href="@{~/css/checkOffer.css}">
-<!--    <link rel="stylesheet" th:href="@{~/css/homepageStyle.css}">-->
-
 
         <style>
           .center {
@@ -25,9 +23,9 @@
           #btn{
             width: 150px;
             height: 39px;
-            margin-top: 20px;
+            margin-top: 15px;
             background: white;
-            color: #EA89B4;
+            color: #0a0a0a;
             border-radius: 9px ;
             font-weight: bold;
             border: none;
@@ -49,13 +47,11 @@
             <!-- image -->
             <div class="image">
               <div class="cover">
-                <h3>The Bachelors Hotel </h3>
-                <h1>Enjoy The Moment!</h1>
+                <h3>Pokhara Paradise Hotel </h3>
+                <h5>"Your Home Away from Home: Where Luxury Meets Comfort"</h5>
                 <div class="center">
                   <a th:href="@{~/user/booking}"><button  id="btn">Book now</button></a>
                 </div>
-
-
               </div>
             </div>
 
@@ -238,8 +234,6 @@
     }
   </script>
   </body>
-
-
   <script>
     let myPage = "homepage";
     let listGroupItem = Array.from(document.getElementsByClassName("list-group-item"));
@@ -249,6 +243,4 @@
     let activeID = document.getElementById(myPage);
     activeID.classList.add("active");
   </script>
-
-
 </html>
