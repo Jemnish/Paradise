@@ -9,7 +9,7 @@ body {
   font-family: montserrat;
 }
 nav {
-  background: #f16e1e;
+  background: #f58c54;
   height: 80px;
   width: 100%;
   position: sticky;
@@ -57,7 +57,7 @@ nav ul button a {
 nav ul a.active,
 nav ul a:hover,
 .dropdown:hover {
-  background: #f16e1e;
+  background: #f5ae8e;
   transition: 0.5s;
   border-radius: 20px;
 }
@@ -79,23 +79,15 @@ nav ul a:hover,
   display: inline-block;
 }
 
-/* .imageButton img{
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: #14274a;
-  border: none;
-  cursor: pointer;
-} */
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #14274a;
+  background-color: #f1aa5f;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   text-transform: capitalize;
   padding-top: 10px;
+  border-radius: 10px;
 }
 .dropdown-content a {
   color: rgb(255, 255, 255);

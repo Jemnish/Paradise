@@ -75,17 +75,7 @@ img {
     display: grid;
 
 }
-/* Styling for the navigation links in the profile tab navigation */
-.nav-link {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #307c34;
-    text-align: center;
-}
-.nav-link.active {
-    background-color: #007bff;
-    color: white;
-}
+
 /* Styling for the form in the tab content */
 .form-control {
     font-size: 1.2rem;
@@ -93,21 +83,8 @@ img {
     border-radius: 0.25rem;
     border: 1px solid #e9ecef;
 }
-/* Styling for the update and cancel buttons */
-button{
-    background-color: #007bff;
-    color: white;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    border: none;
-    margin: 10px;
-}
-button:hover{
-    background-color: #0051ff;
-    color: white;
-    box-shadow: 1px 2px 35px rgb(0 11 254 / 35%);
-}
+
+
 button[type="reset"] {
     background-color: white;
     color: #495057;

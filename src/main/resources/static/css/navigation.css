@@ -1,6 +1,6 @@
 :root {
-  --primary: #f16e1e;
-  --secondary: #f16e1e;
+  --primary: #f58c54;
+  --secondary: #f58c54;
   --white: #ffffff;
   --red: red;
   --black: black;
@@ -17,7 +17,7 @@ body {
   background: #f2f2f2
 }
 .navi{
-  background-color: #f16e1e;
+  background-color: #f58c54;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -45,7 +45,7 @@ nav h1{
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	background: #f16e1e;
+	background: #f58c54;
 	height: 80px;
 	position: relative;
 }

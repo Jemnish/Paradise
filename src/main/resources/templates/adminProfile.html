@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Admin Profile</title>
     <link rel="stylesheet" th:href="@{~/css/profile.css}">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!--  css and other of nav bar-->
     <link rel="stylesheet" th:href="@{/css/dashstyle.css}">
     <link rel="stylesheet" th:href="@{/css/navigation.css}">
     <link rel="shortcut icon" type="x-icon" th:href="@{~/images/logo.jpg}">
@@ -21,15 +18,13 @@
   <div th:replace="fragments/AdminFrag.html :: admin_navigation"></div>
 
 
-  <!--  Profile start here-->
   <section class="py-5 my-5">
     <div class="container">
       <h1 class="mb-5">Account Settings</h1>
       <div class="bg-white shadow rounded-lg d-block d-sm-flex">
-<!--        Image section -->
         <div class="p-4">
           <div class="img-circle text-center mb-3">
-            <img th:src="@{~/images/logo.jpg}" alt="Image" class="shadow">
+            <img th:src="@{~/images/logo_transparent.png}" alt="Image" class="shadow">
           </div>
           <h4 class="text-center">Username</h4>
         </div>
