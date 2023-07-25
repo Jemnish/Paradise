@@ -1,70 +1,91 @@
+/* In booking.css */
 body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-image:  linear-gradient(to bottom, rgb(243, 226, 221), rgba(246, 220, 187, 0.4)),url("../images/ok/homepage_bg.jpg");
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
-
-#form {
-    width: 300px;
-    margin: 3vh auto 0 auto;
+.container {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: whitesmoke;
-    border-radius: 4px;
-    font-size: 12px;
+    background-color: #f6dac9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#form h1 {
-    color: #0f2027;
+.container h1 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-#form button {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    color: white;
-    background-color: rgb(41, 57, 194);
-    border: none;
-    border-radius: 4px;
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .input-control {
-    display: flex;
-    flex-direction: column;
+    margin: 10px;
+    position: relative;
 }
 
-.input-control input {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    font-size: 12px;
-    padding: 10px;
-    width: 100%;
-}
+.input-control input,
 .input-control select {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    font-size: 12px;
-    padding: 10px;
     width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-.input-control input:focus {
-    outline: 0;
+.input-control input:focus,
+.input-control select:focus {
+    border-color: #4285f4;
 }
 
-.input-control.success input {
-    border-color: #09c372;
+.error {
+    color: #ff0000;
+    font-size: 14px;
 }
 
-.input-control.error input {
-    border-color: #ff3860;
+.button-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.input-control .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
+
+
+.container button {
+    width: 100%;
+    height: 39px;
+    margin-top: 15px;
+    background: #ffffff;
+    color: #0a0a0a;
+    border-radius: 9px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.button.secondary {
+    background-color: #ffffff;
 }
 
+.button .secondary, button:hover{
+    background: #f58c54;
+    color: #ffffff;
+}

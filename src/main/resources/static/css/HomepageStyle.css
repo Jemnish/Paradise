@@ -1,6 +1,6 @@
 :root {
   --primary: #14274a;
-  --secondary: #14274a;
+  --secondary: #f5ae8e;
   --white: #ffffff;
   --red: red;
   --black: black;
@@ -261,18 +261,26 @@
   color: var(--white);
 }
 
-.CheckGallery, .reviews, .readBlogs{
-  justify-content: center;
-  padding-top: 20px;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.CheckGallery{
+.CheckGallery {
   width: 100%;
   font-size: 15px;
   padding: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.CheckGallery .title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.CheckGallery h1 {
+  font-size: 30px;
+}
+
+.CheckGallery .GalleryPic {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -283,107 +291,115 @@
   width: 400px;
   padding: 10px;
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.CheckGallery .GalleryPic button{
-  background: transparent;
-  padding-top: 15px;
-  border: 0px;
-  margin: 20px;
-}
-.CheckGallery .GalleryPic button a {
-  background-color: var(--white);
-  border: 1px solid black;
-  border-radius: 20px;
-  color: var(--black);
-  text-decoration: none;
-  font-size: 15px;
-  padding: 5px;
-}
-.CheckGallery .GalleryPic button a:hover {
-  background-color: var(--primary);
-  color: var(--white);
+.CheckGallery .GalleryPic img:hover {
+  transform: scale(1.1);
 }
 
-.reviews .mainmessage{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.reviews .messages {
-  width: 350px;
-  font-size: 15px;
-  margin: 20px;
+
+.CheckGallery .GalleryPic img {
+  animation: fadeIn 1s;
+}
+
+.CheckGallery .GalleryPic img {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  padding: 20px;
 }
-.reviews .messages .customerdetail{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.reviews .messages img{
-  width: 20%;
-  border-radius: 50%;
+
+.CheckGallery .GalleryPic img {
   margin: 10px;
 }
-.readBlogs .mainblog {
+
+
+.reviews {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.reviews .comments h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reviews .mainmessage {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-
-.readBlogs .blog_read {
+.reviews .messages {
   width: 350px;
-  font-size: 15px;
-  text-align: center;
+  font-size: 16px;
+  margin: 20px;
   border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  margin: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
 }
 
-.readBlogs .blog_read img {
-  width: 100%;
+.reviews .messages p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #444;
+  padding:10px;
 }
 
-.readBlogs .blog_read button{
-  background: transparent;
-  padding-top: 10px;
-  border: 0px;
-}
-.readBlogs .blog_read button a{
-  border: 0px;
-  color: var(--black);
-  text-decoration: none;
-  font-size: 15px;
-  padding: 5px;
+.reviews .messages .customerdetail {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
 }
 
-.readBlogs .blog_read button a:hover{
-  color: var(--primary);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.readBlogs button{
-  background: transparent;
-  padding-top: 10px;
-  border: 0px;
-}
-.readBlogs button a{
-  background-color: var(--white);
-  border: 1px solid black;
-  border-radius: 20px;
-  color: var(--black);
-  text-decoration: none;
-  font-size: 15px;
-  padding: 5px;
+.reviews .messages img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
 }
 
-.readBlogs .button a:hover{
-  background-color: var(--primary);
-  color: var(--white);
+/* Add a scaling and rotating effect on hover */
+.reviews .messages img:hover {
+  transform: scale(1.1) rotate(10deg);
 }
+
+.reviews .messages h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.reviews .messages:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
 
 
  @media (max-width: 1000px) {
@@ -402,10 +418,9 @@
   .booking .children {
     width: 35%;
   }
-} 
+}
 
 
-/*  this is css for the contact to suggest problems  */
 .container-fluid {
   padding: 0 1em;
 }
@@ -414,7 +429,11 @@
   margin: 0 auto;
   max-width: 996px;
   padding: 5em 0;
-  padding-top: 25vh; /* No JS fallback*/
+  padding-top: 1vh;
+}
+
+.container h2 {
+  padding: 20px;
 }
 
 .contact {
@@ -426,11 +445,12 @@
   background-color: #f0f0f0;
   border-radius: 4px;
   border-top: 8px solid var(--secondary);
-  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   padding: 1em;
 }
 
-.contact form input, .contact form textarea {
+.contact form input,
+.contact form textarea {
   border: none;
   border-radius: 4px;
   display: block;
@@ -449,10 +469,44 @@
   color: #fff;
   padding: 1em;
   text-transform: uppercase;
-}
-.contact form input[type="submit"]:hover{
-  background-color: #344973;
-  color: firebrick;
-  font-style: oblique;
+  cursor: pointer; /* Add cursor pointer to indicate interactivity */
+  transition: background-color 0.3s, transform 0.2s; /* Adding smooth transitions */
 }
 
+.contact form input[type="submit"]:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+  color: white;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form input[type="submit"] {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact form input,
+.contact form textarea,
+.contact form input[type="submit"] {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+/* Add some color and background to the input fields when they are focused */
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background-color: #f9f9f9;
+}

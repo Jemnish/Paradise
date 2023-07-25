@@ -4,14 +4,10 @@
 
 <head>
     <title>Rooms</title>
-    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">-->
-    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <link rel="stylesheet" th:href="@{~/css/dashstyle.css}">
     <link rel="stylesheet" th:href="@{~/css/navigation.css}">
-    <!--    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
     <script th:src="@{~/javascript/notification.js}" defer></script>
     <link rel="stylesheet" th:href="@{~/css/adminBlogPage.css}">
     <link rel="stylesheet" th:href="@{/css/viewCustomerlist.css}">
@@ -50,8 +46,6 @@
     <h2>Bookings</h2>
     <button class="btn1"><a th:href="@{/admin/newbooking}">+ New Bookings</a></button>
 </div>
-
-<!--<div style="overflow: scroll">-->
 <table id="table_id" >
     <thead>
     <tr>
@@ -80,9 +74,6 @@
         <td th:text="${booking.total}"></td>
         <td th:text="${booking.mobileNo}"></td>
         <td th:text="${booking.number_of_people}"></td>
-        <!--                    <td> <a class="edit" href="#" >Active</a></td>-->
-        <!--                    <td> <a class="edit" href="#" >delete</a></td>-->
-        <!--                    <td> <a class="edit" href="#" >edit</a></td>-->
         <td> <a class="delete_button" th:href="@{~/admin/delete/}+${booking.id}" >delete</a></td>
         <td> <a class="edit_button" th:href="@{~/admin/edit/}+${booking.id}" >edit</a></td>
         <td> <a class="bill_button" th:href="@{~/admin/bill/}+${booking.id}">Bill</a></td>
