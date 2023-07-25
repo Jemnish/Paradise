@@ -90,6 +90,7 @@
       margin-left: 26px;
      
   }
+
 .btn2{
     background:transparent;
     border: 0px;
@@ -97,21 +98,20 @@
 }
 
 .btn2 a {
-    border: 1px solid black;
-    color: var(--black);
+    color: var(--white);
     text-decoration: none;
     font-size: 20px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
-    background-color:greenyellow ;
+    background-color: #f58c54;
     border: 0px;
 }
 
 .btn2 a:hover {
-    background-color:#14274a;
+    background-color: #fd3d3e;
     color: white;
 }
 
@@ -120,8 +120,12 @@
       font-size: 22px;
       font-weight: bold;
       color:black;
+      padding-top: 15px;
   }
-  
+
+  h4{
+      padding-top: 10px;
+  }
   
   
   .down{
@@ -133,12 +137,9 @@
   
   .wrapper-bottom{
       margin-top:2px;
-  
-    
-     
       height:22%;
       display:flex;
-      background-color: rgba(20, 39, 74, 0.61);
+      background-color: #f1e1da;
   
   }
   
@@ -211,15 +212,8 @@
     flex-wrap: wrap;
     margin-right: 4%;
   }
-  /*.btn2{*/
-  /*  margin-left:-111%;*/
-  /*  */
-  /*  margin-top: 4%;*/
-  /*  margin-bottom: 4%;*/
-  /* height:40px ;*/
-  /* width:49%;*/
-  /*}*/
-  
+
+
   .wrapper-bottom{
     flex-wrap: wrap;
     height:30%

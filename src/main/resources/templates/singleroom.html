@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-   <title>Luxe room</title>
-         
-          <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-          <script th:src="@{~/javascript/luxeroom.js}"></script>
+   <title>Single room</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <script th:src="@{~/javascript/luxeroom.js}"></script>
     <link rel="stylesheet" th:href="@{~/css/allrooms.css}">
+    <link rel="stylesheet" th:href="@{~/css/footerStyle.css}">
     <link rel="stylesheet" th:href="@{~/css/home_navigationStyle.css}">
-    <link rel="shortcut icon" type="x-icon" th:href="@{/images/ServicesImages/logo.jpg}">
+    <link rel="shortcut icon" type="x-icon" th:href="@{/images/Logo.png}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 
@@ -23,27 +23,27 @@
             <div class="top-left">
                 <div class="mySlides">
                     <div class="numbertext">1 / 5</div>
-                      <img th:src="@{~/images/luxeroom1.jpg}" style="width:100% ;height:100% ;">
+                      <img th:src="@{~/images/ok/single1.jpg}" style="width:100% ;height:100% ;">
                   </div>
                 
                   <div class="mySlides">
                     <div class="numbertext">2 / 5</div>
-                      <img th:src="@{~/images/luxeroom2.jpg}" style="width:100% ;height:100% ;">
+                      <img th:src="@{~/images/ok/single2.jpg}" style="width:100% ;height:100% ;">
                   </div>
                 
                   <div class="mySlides">
                     <div class="numbertext">3 / 5</div>
-                      <img th:src="@{~/images/luxeroom3.jpg}" style="width:100% ;height:100% ;">
+                      <img th:src="@{~/images/ok/single3.jpg}" style="width:100% ;height:100% ;">
                   </div>
                 
                   <div class="mySlides">
                     <div class="numbertext">4 / 5</div>
-                      <img th:src="@{~/images/luxeroom4.jpg}" style="width:100% ;height:100% ;">
+                      <img th:src="@{~/images/ok/single4.jpg}" style="width:100% ;height:100% ;">
                   </div>
                 
                   <div class="mySlides">
                     <div class="numbertext">5 / 5</div>
-                      <img th:src="@{~/images/luxeroom5.jpg}" style="width:100% ;height:100% ;">
+                      <img th:src="@{~/images/ok/single5.jpg}" style="width:100% ;height:100% ;">
                   </div>
                 
                   
@@ -58,7 +58,7 @@
             <div class="top-right">
                 <div class="right-first">
                    
-                     Features
+                     <h2>Features</h2>
                   
                    <div >
                         <ul class ="list1">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="right-second">
                    
-                      Bathroom and toiletries  
+                      <h4>Bathroom and toiletries</h4>
                     
                     
                     <div >
@@ -87,7 +87,8 @@
                 </div>
                 <div class="right-third">
                     
-                      Entertainment
+                      <h4>Entertainment</h4>
+
                    
                     <div >
                         <ul class ="list3"></ul>
@@ -102,9 +103,7 @@
         
                 </div>
                 <div class="right-last">
-                
-                        Comforts
-                    
+                    <h4>Comforts</h4>
                     <div>
                         <ul class ="list4">
                            <li>Fan</li> 
@@ -126,23 +125,23 @@
 
             <div class="column">
 
-                <img class="demo cursor" th:src="@{~/images/luxeroom1.jpg}" style=" width:100%;height:100% ;" onclick="currentSlide(1)" alt="image1">
+                <img class="demo cursor" th:src="@{~/images/ok/single1.jpg}" style=" width:100%;height:100% ;" onclick="currentSlide(1)" alt="image1">
             </div>
 
             <div class="column">
-                <img class="demo cursor" th:src="@{~/images/luxeroom2.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(2)" alt="image2">
+                <img class="demo cursor" th:src="@{~/images/ok/single2.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(2)" alt="image2">
             </div>
 
             <div class="column">
-                <img class="demo cursor" th:src="@{~/images/luxeroom3.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(3)" alt="image3">
+                <img class="demo cursor" th:src="@{~/images/ok/single3.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(3)" alt="image3">
             </div>
 
             <div class="column">
-                <img class="demo cursor" th:src="@{~/images/luxeroom4.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(4)" alt="image4">
+                <img class="demo cursor" th:src="@{~/images/ok/single4.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(4)" alt="image4">
             </div>
 
             <div class="column">
-                <img class="demo cursor" th:src="@{~/images/luxeroom5.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(5)" alt="image5">
+                <img class="demo cursor" th:src="@{~/images/ok/single5.jpg}" style="width:100% ;height:100% ;" onclick="currentSlide(5)" alt="image5">
             </div>
              
             </div>
@@ -151,6 +150,8 @@
             </div>
 
     </div>
+
+<div th:replace="fragments/Footer_frag.html :: footer"></div>
 
 </body>
 <script>

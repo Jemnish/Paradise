@@ -26,7 +26,7 @@ public class RoomController {
     }
 
     @GetMapping("/luxeroom")
-    public String getLuxe() { return "luxeroom";
+    public String getLuxe() { return "singleroom";
     }
 
     @GetMapping("/familyroom")
