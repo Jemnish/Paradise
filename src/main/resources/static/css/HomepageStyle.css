@@ -111,9 +111,45 @@
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); */
   margin-top: 20px;
 }
+.about {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about h1 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+.imageDetails {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imageDetails img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.imageDetails img:hover {
+  transform: scale(1.1);
+}
+
 .shortdetails .about,
 .shortdetails .imageDetails,
 .shortdetails .history {
@@ -122,8 +158,13 @@
   text-align: center;
   margin: 10px;
   border-radius: 10px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
 }
+
+
 .shortdetails .about p,
 .shortdetails .history p {
   padding-top: 2px;
@@ -139,19 +180,33 @@
   background: transparent;
   cursor: pointer;
 }
-
-
-.Roominformation .heading{
+.shortdetails h1 {
+  font-size: 32px;
+  color: #333;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 20px;
 }
+
+.shortdetails p {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+.Roominformation .heading {
+  text-align: center;
+  padding-top: 50px;
+}
+
 .Roominformation .accommodation {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
-} 
+}
+
 .Roominformation .accommodation .rooms {
   width: 400px;
   font-size: 15px;
@@ -160,15 +215,29 @@
   padding: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.Roominformation .accommodation .rooms:hover, .readBlogs .blog_read:hover {
+.rooms h2{
+  padding-top: 20px;
+}
+
+.Roominformation .accommodation .rooms:hover {
   border: 0.5px solid black;
+  transform: scale(1.05);
 }
 
 .Roominformation .accommodation .rooms img {
   width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+.Roominformation .accommodation .rooms:hover img {
+  transform: scale(1.1);
+}
 
 .Roominformation .accommodation .rooms button {
   background: transparent;
@@ -186,20 +255,13 @@
   font-size: 15px;
   padding: 5px;
 }
+
 .Roominformation .accommodation .rooms button a:hover {
   background-color: var(--primary);
   color: var(--white);
 }
 
-/* 
-.rooms #zoom-in img{
-  transform: scale(1);
-  transition: 0.3s ease-out;
-}
 
-.rooms #zoom-in:hover img{
-  transform: scale(1.05); 
-} */
 
 .CheckGallery, .reviews, .readBlogs{
   justify-content: center;
@@ -208,7 +270,7 @@
   padding-bottom: 20px;
 }
 
-.CheckGallery .GalleryPic {
+.CheckGallery{
   width: 100%;
   font-size: 15px;
   padding: 40px;
@@ -222,8 +284,9 @@
   width: 400px;
   padding: 10px;
   border-radius: 10px;
-
 }
+
+
 
 .CheckGallery .GalleryPic button{
   background: transparent;
@@ -344,22 +407,6 @@
   }
 } 
 
- /* @media (max-width: 1200px) {
-  .shortdetails .about,
-  .shortdetails .imageDetails,
-  .shortdetails .history {
-    width: 45%;
-  }
-}
-
-@media (max-width: 800px) {
-  .shortdetails .about,
-  .shortdetails .imageDetails,
-  .shortdetails .history {
-    width: 95%;
-  }
-}   */
-
 
 /*  this is css for the contact to suggest problems  */
 .container-fluid {
@@ -371,7 +418,6 @@
   max-width: 996px;
   padding: 5em 0;
   padding-top: 25vh; /* No JS fallback*/
-  /*padding-bottom: 25vh; !* No JS fallback*!*/
 }
 
 .contact {
