@@ -20,13 +20,10 @@ body {
   background-color: #f58c54;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
   position: sticky;
   top:0;
   width: 100%;
-  /* margin-left: 30px;
-  margin-right: 30px; */
-
 }
 nav h1{
   color: var(--white);
@@ -40,15 +37,8 @@ nav h1{
   width: 80px;
   margin-left: 20px;
 }
-/* push notification */
-.navi {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	background: #f58c54;
-	height: 80px;
-	position: relative;
-}
+
+
 .icon {
 	cursor: pointer;
 	margin-right: 50px;

@@ -1,11 +1,8 @@
 package com.example.pokhara_paradise.Controller;
-// npm install datatables.net    # Core library
-// npm install datatables.net-dt # Styling
 
 import com.example.pokhara_paradise.Services.UserService;
 import com.example.pokhara_paradise.UserPojo.*;
 import com.example.pokhara_paradise.entity.Booking;
-
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -43,21 +40,14 @@ public class HomepageController {
         }
         model.addAttribute("feedback", new FeedbackPojo());
 
-//        model.addAttribute("info",userService.findByEmail(principal.getName()));
         return ("homepage");
     }
 
 
-    @GetMapping("/services")
-    public String getServicePage(Model model , Principal principal) {
 
-//        model.addAttribute("info",userService.findByEmail(principal.getName()));
-        return "services";
-    }
 
     @GetMapping("/rooms")
     public String getRooms(Model model, Principal principal) {
-//        model.addAttribute("info",userService.findByEmail(principal.getName()));
         return "rooms";
     }
 

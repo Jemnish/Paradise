@@ -26,7 +26,6 @@ import java.util.Map;
 public class AdminController {
     private final UserService userService;
     private  final BookingRepo bookingRepo;
-    private  final CabService cabService;
 
     @GetMapping("/list")
     public String getUserList( Model model) {
@@ -98,19 +97,7 @@ public class AdminController {
 
 
 
-    @GetMapping("/cabBookingByCustomer")
-    public String getCabBooking(Model model) {
-        List<Cab> cabs = cabService.findAll();
-        model.addAttribute("cab", cabs);
-        return "Admin/ViewCabBooking";
-    }
 
-
-    @GetMapping("/deletecab/{id}")
-    public String detCab(@PathVariable("id") Integer id) {
-        cabService.deleteById(id);
-        return "redirect:/admin/cabBookingByCustomer";
-    }
 
 
     public Map<String, String> validateRequest(BindingResult bindingResult) {

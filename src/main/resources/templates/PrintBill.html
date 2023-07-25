@@ -9,7 +9,7 @@
     <link rel="stylesheet" th:href="@{~/css/PrintBill.css}" />
     <link rel="shortcut icon" type="x-icon" th:href="@{/images/ServicesImages/logo.jpg}">
 
-    <title>Customer Invoice: Luxury Hotel</title>
+    <title>Customer Invoice: Paradise Hotel</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <section class="top-content bb d-flex justify-content-between">
           <div class="logo">
 <!--            <img src="southern.png" alt="not" class="img-fluid" />-->
-            <p> The Bachelors Hotel: Visit again !!! &#128512; &#128512;</p>
+            <p> The Paradise Hotel</p>
           </div>
           <div class="top-left">
             <div class="graphic-path">
@@ -73,44 +73,7 @@
                 <td th:text="${bill.getCheckin()}"></td>
                 <td th:text="${bill.getCheckout()}"></td>
                 <td th:text="${bill.getNumber_of_people()}"></td>
-<!--                <td>$500</td>-->
               </tr>
-<!--              <tr>-->
-<!--                <td>-->
-<!--                  <div class="media">-->
-<!--                    <div class="media-body">-->
-<!--                      <p class="mt-0 title">Momo</p>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </td>-->
-<!--                <td>$100</td>-->
-<!--                <td>4</td>-->
-<!--                <td>$600</td>-->
-<!--              </tr>-->
-<!--              <tr>-->
-<!--                <td>-->
-<!--                  <div class="media">-->
-<!--                    <div class="media-body">-->
-<!--                      <p class="mt-0 title">Pizza</p>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </td>-->
-<!--                <td>$500</td>-->
-<!--                <td>2</td>-->
-<!--                <td>$700</td>-->
-<!--              </tr>-->
-<!--              <tr>-->
-<!--                <td>-->
-<!--                  <div class="media">-->
-<!--                    <div class="media-body">-->
-<!--                      <p class="mt-0 title">Wine</p>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </td>-->
-<!--                <td>$500</td>-->
-<!--                <td>2</td>-->
-<!--                <td>$700</td>-->
-<!--              </tr>-->
             </tbody>
           </table>
         </section>

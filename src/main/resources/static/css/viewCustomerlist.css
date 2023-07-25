@@ -3,13 +3,11 @@
 }
 
 .Main-wrapper{
-    width:90%;
+    width:100%;
     display:flex;
     flex-direction: column;
-    margin-left: 8%;
+    margin-left: 1%;
     display: inline-block;
- 
-    margin-top: 3%;
 }
 
 .wrapper-top{
@@ -20,7 +18,7 @@
 }
 
 h2{
-    margin-top:4%;
+    margin-top:1%;
     text-align: end;
 }
 
@@ -80,21 +78,20 @@ display: table;
 
 .btn1{
     margin-left: 2%;
-    margin-top: 2%;
     font-size: 15px;
     height:50px ;
     width:25%;
+    color: black;
     border-radius: 24px;
-    background-color: #5041BC;
-   
-    border-color: white;
+    background-color: #f58c54;
+    border-color: #f6dac9;
 }
 a{
     color: white;
 }
 .btn1:hover {
     
-    color: black;
+    color: #f58c54;
     font-weight: bold;
     border: white solid;
  }

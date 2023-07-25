@@ -80,7 +80,7 @@ body {
   right: -100px;
   text-transform: uppercase;
   background-color: var(--dark);
-  font: 26px;
+  font-size: 26px;
   z-index: 3;
   position: absolute;
   padding-left: 10px;
@@ -175,7 +175,7 @@ tfoot td {
 
 .box p {
   text-transform: uppercase;
-  font: 26px;
+  font-size: 26px;
   color: #ffffff;
   text-align: center;
   line-height: 50px;
@@ -185,7 +185,7 @@ tfoot td {
 
 .back{
   width: 163.96px;
-  font: 26px;
+  font-size: 26px;
   color:black;
   text-align: center;  
   border-radius: 2px;
@@ -198,7 +198,7 @@ tfoot td {
   text-transform: uppercase;
   background-color: red;
   width: 163.96px;
-  font: 26px;
+  font-size: 26px;
   color: #ffffff;
   text-align: center;  
   border-radius: 2px;
@@ -221,7 +221,7 @@ tfoot td {
   @media (max-width:1024px){
     .page{
         margin-top: 15%
-    };
+    }
 }
 
 

@@ -72,11 +72,6 @@ public class UserController {
     }
 
 
-    @GetMapping("/pickup_request")
-    public String getPickupPage() {
-        return ("picked_up");
-    }
-
 
     @GetMapping("/request-password-reset")
     public String requestPasswordReset() {

@@ -1,19 +1,14 @@
 <div th:fragment="admin_navigation">
-    <!--    Nav bar-->
     <nav class="navi">
-        <label class="logo"> <a href="#"><img th:src="@{~/images/logo.jpg}" alt=""></a></label>
-        <h1>The Bachelors Hotel: Admin </h1>
+        <label class="logo"> <a href="#"><img th:src="@{~/images/Logo.png}" alt=""></a></label>
+        <h1>Hotel Paradise : Admin </h1>
 
     </nav>
     <div id="mySidenav" class="sidenav">
-        <label class="logoInNav"> <a href="#"><img src="../images/logo.jpg" alt=""></a></label>
+        <label class="logoInNav"> <a href="#"><img src="../images/logo.png" alt=""></a></label>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a class="list-group-item" id="new" th:href="@{~/admin/list}">new booking</a>
-<!--        <a class="list-group-item" id="room" th:href="@{~/admin/room}">Room</a>-->
         <a class="list-group-item" id="book" th:href="@{~/admin/contactfetch}">View FeedBack</a>
-        <a class="list-group-item" id="cab" th:href="@{~/admin/cabBookingByCustomer}">Cab Booking</a>
-<!--        <a class="list-group-item" th:href="@{~/admin/list}" style="margin-top: 150px">Logout</a>-->
-        <a class="list-group-item"  id="settings" th:href="@{~/admin/admin_profile}">Settings</a>
         <a class="list-group-item" id="logout" th:href="@{~/logout}" style="margin-top: 150px">Logout</a>
     </div>
     <span class="burger" onclick="openNav()">&#9776;</span>
