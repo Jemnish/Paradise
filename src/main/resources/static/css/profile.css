@@ -2,10 +2,7 @@
 .py-5 {
     padding: 3rem 0;
 }
-.my-5 {
-    margin: 3rem 0;
-}
-/* Styling for the container */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,8 +22,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
-
+    width: 80%;
     padding: 15px;
     margin: 2%;
 }
@@ -85,16 +81,17 @@ img {
 }
 
 
-button[type="reset"] {
-    background-color: white;
-    color: #495057;
+button[type="submit"]{
+    background-color: #f6dac9;
+    color: #000000;
+    border-radius:10px;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     border: 1px solid #e9ecef;
 }
-button[type="reset"]:hover{
-    background-color: #ffffff;
-    color: #000000;
+button[type="submit"]:hover{
+    background-color: #f58c54;
+    color: #ffffff;
     box-shadow: 1px 2px 35px rgba(245, 243, 243, 0.75);
 }

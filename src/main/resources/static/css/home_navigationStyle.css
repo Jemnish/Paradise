@@ -70,23 +70,11 @@ nav ul a:hover,
   text-transform: uppercase;
 }
 
-/* .dropbtn img{
-  padding: 0px;
-} */
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* .imageButton img{
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: #14274a;
-  border: none;
-  cursor: pointer;
-} */
 
 .dropdown-content {
   display: none;
@@ -140,9 +128,9 @@ nav ul a:hover,
     display: block;
   }
   nav ul {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: #2c3e50;
     top: 80px;
     left: -100%;
