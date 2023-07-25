@@ -261,8 +261,6 @@
   color: var(--white);
 }
 
-
-
 .CheckGallery, .reviews, .readBlogs{
   justify-content: center;
   padding-top: 20px;
@@ -273,7 +271,7 @@
 .CheckGallery{
   width: 100%;
   font-size: 15px;
-  padding: 40px;
+  padding: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-wrap: wrap;
@@ -281,12 +279,11 @@
 }
 
 .CheckGallery .GalleryPic img {
+  height: 272px;
   width: 400px;
   padding: 10px;
   border-radius: 10px;
 }
-
-
 
 .CheckGallery .GalleryPic button{
   background: transparent;
