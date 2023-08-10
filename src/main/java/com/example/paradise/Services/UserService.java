@@ -1,11 +1,8 @@
 package com.example.paradise.Services;
-
-
 import com.example.paradise.UserPojo.*;
 import com.example.paradise.entity.Booking;
 import com.example.paradise.entity.Feedback;
 import com.example.paradise.entity.User;
-
 import java.util.List;
 
 public interface UserService {

@@ -18,26 +18,13 @@ import java.util.Optional;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BookingRepositoryTest {
 
-
     @Autowired
     private BookingRepo bookingRepo;
 
-
     @Test
     @Order(1)
-    @Rollback(value = false)
-    public void saveBookingTest() {
-
-
-        Booking booking = Booking.builder()
-                .fullname("roshan")
-                .rooms("single")
-                .checkin("23/2/2023")
-                .checkout("30/2/2023")
-                .mobileNo("9848009835")
-                .number_of_people("2")
-                .build();
-
+    public void shouldSaveBooking() {
+        Booking booking = createBooking();
 
         bookingRepo.save(booking);
 
@@ -46,96 +33,61 @@ public class BookingRepositoryTest {
 
     @Test
     @Order(2)
-    public void getBookingTest() {
-
-        Booking booking = Booking.builder()
-                .fullname("roshan")
-                .rooms("single")
-                .checkin("23/2/2023")
-                .checkout("30/2/2023")
-                .mobileNo("9848009835")
-                .number_of_people("2")
-                .build();
-
-
+    public void shouldGetBooking() {
+        Booking booking = createBooking();
         bookingRepo.save(booking);
 
-
         Booking bookingCreated = bookingRepo.findById(booking.getId()).get();
-        Assertions.assertThat(bookingCreated.getId()).isEqualTo(booking.getId());
 
+        Assertions.assertThat(bookingCreated.getId()).isEqualTo(booking.getId());
     }
 
     @Test
     @Order(3)
-    public void getListOfBookingTest(){
-        Booking booking = Booking.builder()
-                .fullname("roshan")
-                .rooms("single")
-                .checkin("23/2/2023")
-                .checkout("30/2/2023")
-                .mobileNo("9848009835")
-                .number_of_people("2")
-                .build();
-
-
+    public void shouldGetListOfBookings() {
+        Booking booking = createBooking();
         bookingRepo.save(booking);
-        List<Booking> Booking = bookingRepo.findAll();
-        Assertions.assertThat(Booking.size()).isGreaterThan(0);
-    }
 
+        List<Booking> bookings = bookingRepo.findAll();
+
+        Assertions.assertThat(bookings).isNotEmpty();
+    }
 
     @Test
     @Order(4)
-    public void updateBookingTest(){
-
-        Booking booking = Booking.builder()
-                .fullname("roshan")
-                .rooms("single")
-                .checkin("23/2/2023")
-                .checkout("30/2/2023")
-                .mobileNo("9848009835")
-                .number_of_people("2")
-                .build();
+    public void shouldUpdateBooking() {
+        Booking booking = createBooking();
         bookingRepo.save(booking);
 
-        Booking booking1  = bookingRepo.findById(booking.getId()).get();
-
+        Booking booking1 = bookingRepo.findById(booking.getId()).get();
         booking1.setFullname("new name");
-
-        Booking bookingUpdated  = bookingRepo.save(booking);
+        Booking bookingUpdated = bookingRepo.save(booking1);
 
         Assertions.assertThat(bookingUpdated.getFullname()).isEqualTo("new name");
-
     }
 
     @Test
     @Order(5)
-    public void deleteBookingTest(){
-
-        Booking booking = Booking.builder()
-                .fullname("roshan")
-                .rooms("single")
-                .checkin("23/2/2023")
-                .checkout("30/2/2023")
-                .mobileNo("9848009835")
-                .number_of_people("2")
-                .build();
+    public void shouldDeleteBooking() {
+        Booking booking = createBooking();
         bookingRepo.save(booking);
-
-//        @Query(value = "SELECT * from")
 
         Booking booking1 = bookingRepo.findById(booking.getId()).get();
         bookingRepo.delete(booking1);
 
-        Booking booking2 = null;
-        Optional<Booking> optionalBooking = bookingRepo.findBookingByFullname("roshan");
-        if(optionalBooking.isPresent()){
-            booking2 = optionalBooking.get();
-        }
+        Optional<Booking> optionalBooking = bookingRepo.findBookingByFullname("jenish");
 
-        Assertions.assertThat(booking2).isNull();
-//        Assertions.assertThat(booking1.getId()).isNull();
+        Assertions.assertThat(optionalBooking).isEmpty();
     }
 
+    private Booking createBooking() {
+        return Booking.builder()
+                .fullname("jenish")
+                .rooms("single")
+                .checkin("23/2/2023")
+                .checkout("30/2/2023")
+                .mobileNo("9810000000")
+                .number_of_people("2")
+                .build();
+    }
 }

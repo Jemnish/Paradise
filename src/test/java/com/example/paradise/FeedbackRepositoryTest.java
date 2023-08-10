@@ -21,17 +21,10 @@ public class FeedbackRepositoryTest {
     @Autowired
     private FeedbackRepo feedbackRepo;
 
-
     @Test
     @Order(1)
-    @Rollback(value = false)
-    public void saveContactTest() {
-
-
-        Feedback feedback = Feedback.builder()
-                .email("joshiroshan052@gmail.com")
-                .message("wow")
-                .build();
+    public void shouldSaveFeedback() {
+        Feedback feedback = createFeedback();
 
         feedbackRepo.save(feedback);
 
@@ -40,80 +33,57 @@ public class FeedbackRepositoryTest {
 
     @Test
     @Order(2)
-    public void getContactTest() {
-
-        Feedback feedback = Feedback.builder()
-                .email("joshiroshan052@gmail.com")
-                .message("wow")
-                .build();
-
+    public void shouldGetFeedback() {
+        Feedback feedback = createFeedback();
         feedbackRepo.save(feedback);
 
-
         Feedback feedbackCreated = feedbackRepo.findById(feedback.getId()).get();
-        Assertions.assertThat(feedbackCreated.getId()).isEqualTo(feedback.getId());
 
+        Assertions.assertThat(feedbackCreated.getId()).isEqualTo(feedback.getId());
     }
 
     @Test
     @Order(3)
-    public void getListOfContactTest(){
-        Feedback feedback = Feedback.builder()
-                .email("joshiroshan052@gmail.com")
-                .message("wow")
-                .build();
+    public void shouldGetListOfFeedback() {
+        Feedback feedback = createFeedback();
         feedbackRepo.save(feedback);
-        List<Feedback> User = feedbackRepo.findAll();
-        Assertions.assertThat(User.size()).isGreaterThan(0);
-    }
 
+        List<Feedback> feedbackList = feedbackRepo.findAll();
+
+        Assertions.assertThat(feedbackList).isNotEmpty();
+    }
 
     @Test
     @Order(4)
-    public void updateContactTest(){
-
-        Feedback feedback = Feedback.builder()
-                .email("joshiroshan052@gmail.com")
-                .message("wow")
-                .build();
-
+    public void shouldUpdateFeedback() {
+        Feedback feedback = createFeedback();
         feedbackRepo.save(feedback);
 
-        Feedback feedback1  = feedbackRepo.findById(feedback.getId()).get();
+        Feedback feedback1 = feedbackRepo.findById(feedback.getId()).get();
+        feedback1.setEmail("newemail@gmail.com");
+        Feedback feedbackUpdated = feedbackRepo.save(feedback1);
 
-        feedback1.setEmail("joshiroshan052@gmail.com");
-
-        Feedback feedbackUpdated  = feedbackRepo.save(feedback);
-
-        Assertions.assertThat(feedbackUpdated.getEmail()).isEqualTo("joshiroshan052@gmail.com");
-
+        Assertions.assertThat(feedbackUpdated.getEmail()).isEqualTo("newemail@gmail.com");
     }
 
     @Test
     @Order(5)
-    public void deleteContactTest(){
-
-        Feedback feedback = Feedback.builder()
-                .email("joshiroshan052@gmail.com")
-                .message("wow")
-                .build();
-
+    public void shouldDeleteFeedback() {
+        Feedback feedback = createFeedback();
         feedbackRepo.save(feedback);
-
-//        @Query(value = "SELECT * from")
 
         Feedback feedback1 = feedbackRepo.findById(feedback.getId()).get();
         feedbackRepo.delete(feedback1);
 
-        Feedback feedback2 = null;
-        Optional<Feedback> optionalFeedback = feedbackRepo.findFeedbackByEmail("joshiroshan052@gmail.com");
-        if(optionalFeedback.isPresent()){
-            feedback2 = optionalFeedback.get();
-        }
+        Optional<Feedback> optionalFeedback = feedbackRepo.findFeedbackByEmail("jenish@gmail.com");
 
-        Assertions.assertThat(feedback2).isNull();
-//        Assertions.assertThat(User1.getId()).isNull();
+        Assertions.assertThat(optionalFeedback).isEmpty();
     }
 
-
+    private Feedback createFeedback() {
+        return Feedback.builder()
+                .email("jenish@gmail.com")
+                .message("wow")
+                .build();
+    }
 }
