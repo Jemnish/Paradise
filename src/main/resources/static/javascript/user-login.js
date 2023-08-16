@@ -19,7 +19,5 @@ function fill(){
         alert("please enter your password!!!")
     }else if(e=="" || p==""){
         alert("please fill all your details!!!")
-    }else{
-        alert("Welcome!!!")
     }
 }
